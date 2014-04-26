@@ -53,3 +53,46 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+.col {
+  padding: 0 1em;
+}
+
+.row .row {
+  margin: 0 -1em;
+}
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+@media only screen {
+  .col {
+    float: left;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+@media screen and (min-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .sidebar {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sidebar {
+    width: 33.33333%;
+  }
+}

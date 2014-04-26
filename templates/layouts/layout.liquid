@@ -10,10 +10,11 @@
         {% block styles %}{% endblock %}
     </head>
     <body>
-        <div id="wrapper">
-            {% include "header" %}
-            {% block content %}{% endblock %}
-        </div>
+        {% include "header" %}
+            <div id="wrapper">
+                {% block content %}{% endblock %}
+            </div>
+        {% include "footer" %}
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         {{ "index.js" | asset_url | script_tag }}
         {% block scripts %}{% endblock %}
