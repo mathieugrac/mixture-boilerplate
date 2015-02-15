@@ -1,0 +1,97 @@
+// -----------------------------------------------------------------------------
+//
+// Mixins
+//
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// For typography
+// -----------------------------------------------------------------------------
+
+// [doc] To manage font-faces. [/doc]
+@mixin set-font($font, $path) {
+  $path: "/assets/fonts/" + $path;
+  @include font-face( 
+    $font, 
+    font-files( 
+      $path+".woff",
+      $path+".ttf",
+      $path+".otf",
+      $path+".svg"
+    ) 
+  )
+}
+
+// [doc] Rem with pixel fallback for font sizes. [/doc]
+@mixin font-size($variant) {
+  @if map-has-key($font-size, $variant) {
+    $variation:           map-get($font-size, $variant);
+    $font-size-value:     strip-unit( map-get($variation, font-size) );
+    $line-height-value:   strip-unit( map-get($variation, line-height) );
+    font-size: #{$font-size-value + px};
+    font-size: #{($font-size-value / 10) + rem};
+    line-height: $line-height-value / $font-size-value;
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$font-size}`. Please make sure it is defined in `$font-size` map.";
+  }
+}
+
+// [doc] Vertically center using line-height (not suitable for multiple lines of text). [/doc]
+@mixin vertically-center($x: 20){
+  $value: strip-unit($x);
+  height: #{$value + px};
+  line-height: #{$value + px};
+}
+
+
+// -----------------------------------------------------------------------------
+// For layout
+// -----------------------------------------------------------------------------
+
+// [doc] Manage responsive layout. [/doc]
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Math
+// -----------------------------------------------------------------------------
+
+// [doc] Utility to simply strip units from any value. [/doc]
+@function strip-unit($value) {
+ @return $value / ($value * 0 + 1);
+}
+
+
+// -----------------------------------------------------------------------------
+// Inputs
+// -----------------------------------------------------------------------------
+
+// [doc] Style input placeholders (Pass in a content block). [/doc]
+@mixin placeholder() {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder{
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

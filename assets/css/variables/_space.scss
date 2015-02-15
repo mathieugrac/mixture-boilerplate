@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+//
+// Space variables
+//
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Space Size Map
+// -----------------------------------------------------------------------------
+
+$base-unit: 4px;
+// Rounded numbers based on a scale of 4px @ 1:1.5
+
+$space-size: (
+  x-small:      $base-unit,        
+  small:        $base-unit * 2,        
+  base:         $base-unit * 5,                
+  medium:       $base-unit * 8,        
+  large:        $base-unit * 17,        
+  x-large:      $base-unit * 25 
+);        
+
+
+// -----------------------------------------------------------------------------
+// Create Space classes
+// -----------------------------------------------------------------------------
+
+@each $name, $value in $space-size {
+  .space--#{$name} {
+    margin-top: map-get($space-size, $name);
+    margin-bottom: map-get($space-size, $name);
+  }
+}
+
+@each $name, $value in $space-size {
+  .space-top--#{$name} {
+    margin-top: map-get($space-size, $name);
+  }
+}
+
+@each $name, $value in $space-size {
+  .space-bottom--#{$name} {
+    margin-bottom: map-get($space-size, $name);
+  }
+}

@@ -1,6 +1,6 @@
 {
   "convertHtml": {
-    "relativePaths": false
+    "relativePaths": true
   },
   "debug": false,
   "domain": null,
@@ -11,8 +11,8 @@
   ],
   "preprocessorScriptOutput": "assets/scripts",
   "preprocessorStyleOutput": "assets/css",
-  "projectDescription": "Un boileplate perso pour bien démarrer dans la vie",
-  "projectName": "My Boilerplate",
+  "projectDescription": "Un boilerplate perso pour attaquer mes projets.",
+  "projectName": "My Boilerplate V2",
   "publishedId": null,
   "password": null,
   "serverHostname": null,

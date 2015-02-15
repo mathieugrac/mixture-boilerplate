@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+//
+// Buttons
+//
+// -----------------------------------------------------------------------------
+
+%btn {
+  -webkit-appearance: none;
+  outline: none;
+  text-decoration: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+}
+
+// STYLE - Create a map for variant colors buttons
+
+// SIZE - Create differents classes to manage sizing.
+
+.btn {
+  @extend %btn;
+  // Content;
+}
+
+.btn--small {
+  // padding: $space-tiny;
+}

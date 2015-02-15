@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+//
+// Main stylesheet
+//
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// VENDOR        Default fall-backs and external files
+// -----------------------------------------------------------------------------
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/utilities/general";
+
+
+// -----------------------------------------------------------------------------
+// HELPERS       Mixins and Placeholders used in the project
+// -----------------------------------------------------------------------------
+
+
+@import "helpers/mixins";
+@import "helpers/functions";
+
+
+// -----------------------------------------------------------------------------
+// VARIABLES     All the values are set here
+// -----------------------------------------------------------------------------
+
+@import "variables/space";
+@import "variables/font";
+@import "variables/colors";
+@import "variables/layout";
+
+
+// -----------------------------------------------------------------------------
+// BASE          Basic stuff
+// -----------------------------------------------------------------------------
+
+@import "base/grid";
+@import "base/layout";
+@import "base/typography";
+
+
+// -----------------------------------------------------------------------------
+// COMPONENTS    Galerie of basic elements
+// -----------------------------------------------------------------------------
+
+@import "components/headings";
+@import "components/texts";
+@import "components/links";
+@import "components/borders";
+@import "components/lists";
+@import "components/buttons";
+@import "components/inputs";
+@import "components/images";
+@import "components/tables";
+
+
+// -----------------------------------------------------------------------------
+// MODULES       custom and complex components
+// -----------------------------------------------------------------------------
+
+@import "modules/nav";
+@import "modules/column";
+
+
+// -----------------------------------------------------------------------------
+// SECTIONS      Main sections of templating pages
+// -----------------------------------------------------------------------------
+
+@import "sections/header";
+@import "sections/footer";
+
+
+// -----------------------------------------------------------------------------
+// PAGES         Specific styles depending on a page
+// -----------------------------------------------------------------------------
+
+@import "pages/index"
+
+

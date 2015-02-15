@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+//
+// Type variables
+//
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Font Size Map   Line-height must be a multiple of $base-unit
+// -----------------------------------------------------------------------------
+
+$font-size: (
+  x-small:  (
+    font-size:          12px,
+    line-height:        14px
+    ),
+  small: (
+    font-size:          16px,
+    line-height:        20px 
+    ),
+  base: (
+    font-size:          18px,
+    line-height:        24px 
+    ),
+  medium: (
+    font-size:          24px,
+    line-height:        32px 
+    ),
+  large: (
+    font-size:          32px,
+    line-height:        38px 
+    ),
+  x-large: (
+    font-size:          48px,
+    line-height:        48px 
+    )
+);
+
+
+// -----------------------------------------------------------------------------
+// Font Family Map
+// -----------------------------------------------------------------------------
+
+$font-family: (
+  primary:    (
+    font-name:          "Charter Roman",
+    font-file:          "charter/chartbtrom-webfont",
+    font-fallback:      (Georgia, Times, serif)
+  ),
+  primary--italic: (
+    font-name:          "Charter Italic",
+    font-file:          "charter/chartbtita-webfont",
+    font-fallback:      (Georgia, Times, serif)
+  ),
+  secondary--bold: (
+    font-name:          "Arial",
+    font-fallback:      (Helvetica, sans-serif)
+  )
+);
+
+
+// -----------------------------------------------------------------------------
+// Create Font classes
+// -----------------------------------------------------------------------------
+
+@each $variant, $values in $font-family {
+  @if map-has-key($values, font-file){
+    @include set-font(map-get($values, font-name), map-get($values, font-file));
+  }
+  %font-#{$variant} {
+    font-family: map-get($values, font-name), map-get($values, font-fallback);
+    font-weight: normal;
+  }
+}
+
+

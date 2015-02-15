@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------
+//
+// Typography
+//
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Base
+// -----------------------------------------------------------------------------
+
+%text-rendering {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  // @extend %text-rendering;
+  @extend %font-primary;
+  @include font-size(base);
+}
+
+
+// -----------------------------------------------------------------------------
+// Text selection
+// -----------------------------------------------------------------------------
+
+::-moz-selection {
+  background-color: $color-selection--background;
+  color: $color-selection--text;
+}
+
+::selection {
+  background-color: $color-selection--background;
+  color: $color-selection--text;
+}
+
+
+// -----------------------------------------------------------------------------
+// Typographic classes
+// -----------------------------------------------------------------------------
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+

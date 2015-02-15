@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+//
+// Colors variables
+//
+// -----------------------------------------------------------------------------
+
+
+
+// -----------------------------------------------------------------------------
+// Step #1   Put all your colors in the map
+// -----------------------------------------------------------------------------
+
+$palettes: (
+  grey: (
+    dark:                             #282828,
+    base:                             #666,
+    light:                            #999,
+    x-light:                          #f2f2f2
+  )
+);
+
+
+// -----------------------------------------------------------------------------
+// Step #2   Define your main rules with variables
+// -----------------------------------------------------------------------------
+
+$color-text:                          color(grey, base);
+$color-text--dark:                    color(grey, dark);
+$color-text--light:                   color(grey, light);
+
+$color-bg:                            color(grey, light);
+
+$color-selection--background:         color(grey, base);
+$color-selection--text:               white;
