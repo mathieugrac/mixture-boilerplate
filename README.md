@@ -1,4 +1,4 @@
-mixture-boilerplate-1
+Boilerplate Mixture
 =====================
 
-My first boilerplate for Mixture.io
+This is boilerplate v2.0 for boostraping projects with mixture.io
