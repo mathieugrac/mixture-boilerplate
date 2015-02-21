@@ -28,42 +28,44 @@
 // VARIABLES     All the values are set here
 // -----------------------------------------------------------------------------
 
-@import "variables/space";
-@import "variables/font";
+@import "variables/sizes";
+@import "variables/fonts";
 @import "variables/colors";
-@import "variables/layout";
 
 
 // -----------------------------------------------------------------------------
-// BASE          Basic stuff
+// LAYOUT        …
 // -----------------------------------------------------------------------------
 
-@import "base/grid";
-@import "base/layout";
-@import "base/typography";
-
-
-// -----------------------------------------------------------------------------
-// COMPONENTS    Galerie of basic elements
-// -----------------------------------------------------------------------------
-
-@import "components/headings";
-@import "components/texts";
-@import "components/links";
-@import "components/borders";
-@import "components/lists";
-@import "components/buttons";
-@import "components/inputs";
-@import "components/images";
-@import "components/tables";
+@import "layout/grid";
+@import "layout/positioning";
+@import "layout/spacing";
+@import "layout/text";
+@import "layout/containers";
 
 
 // -----------------------------------------------------------------------------
-// MODULES       custom and complex components
+// ELEMENTS      Galerie of basic elements
 // -----------------------------------------------------------------------------
 
-@import "modules/nav";
-@import "modules/column";
+@import "elements/html";
+@import "elements/body";
+@import "elements/headings";
+@import "elements/paragraphs";
+@import "elements/blockquotes";
+@import "elements/lists";
+@import "elements/buttons";
+@import "elements/inputs";
+@import "elements/images";
+@import "elements/tables";
+
+
+// -----------------------------------------------------------------------------
+// COMPONENTS    Pieces of assembling elements
+// -----------------------------------------------------------------------------
+
+@import "components/navs";
+@import "components/boxes";
 
 
 // -----------------------------------------------------------------------------

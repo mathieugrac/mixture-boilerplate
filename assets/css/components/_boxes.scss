@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+//
+// Boxes
+//
+// -----------------------------------------------------------------------------
+
+
+.box {
+  padding: space(small);
+  margin-bottom: $gutter;
+  @include respond-to(medium){ margin-bottom: $gutter*2; }
+}
+
+.box-default {
+  @extend .box;
+  border: 1px solid transparentize($color-bg, 0.5);
+  background-color: transparentize($color-bg, 0.8);
+}
+
+.box-accent {
+  @extend .box;
+  $color-box-accent: color(blue,base);
+  background-color: transparentize($color-box-accent, 0.8);
+  border: 1px solid transparentize($color-box-accent, 0.5);
+}

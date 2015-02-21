@@ -12,37 +12,32 @@
 // Rows and Cols
 // -----------------------------------------------------------------------------
 
-* {
-  box-sizing: border-box;
-}
+*          {    box-sizing: border-box;   }
+ 
+.l-row       {    position: relative;       }
+.l-row:after {    clear: both;              }
 
-.row {
-  position: relative;
-}
-
-.row:before,
-.row:after {
+.l-row:before,
+.l-row:after {
   content: "";
   display: table;
 }
 
-.row:after {
-  clear: both;
-}
-
-.row {
-  .row {
+.l-row {
+  .l-row {
     margin-left: (-$gutter);
     margin-right: (-$gutter);
   }
 }
 
-.col {
-  padding: 0 $gutter;
+.l-col {
+  position: relative;
+  padding-left: $gutter;
+  padding-right: $gutter;
 }
 
 @media only screen {
-  .col {
+  .l-col {
     float: left;
     width: 100%;
     -webkit-box-sizing: border-box;
@@ -56,37 +51,43 @@
 // Six Column Grid
 // -----------------------------------------------------------------------------
 
-.col--1-6 {
+.l-col--1-6 {
+  @extend .l-col;
   @include respond-to(small)  {    width: 100%;                 }
   @include respond-to(medium) {    width: percentage(6/6);      }
   @include respond-to(large)  {    width: percentage(1/6);      }
 }
  
-.col--2-6 {
+.l-col--2-6 {
+  @extend .l-col;
   @include respond-to(small)  {    width: 100%;                 }
   @include respond-to(medium) {    width: percentage(3/6);      }
   @include respond-to(large)  {    width: percentage(2/6);      }
 } 
 
-.col--3-6 {
+.l-col--3-6 {
+  @extend .l-col;
   @include respond-to(small)  {    width: 100%;                 }
   @include respond-to(medium) {    width: percentage(3/6);      }
   @include respond-to(large)  {    width: percentage(3/6);      }
 }
 
-.col--4-6 {
+.l-col--4-6 {
+  @extend .l-col;
   @include respond-to(small)  {    width: 100%;                 }
   @include respond-to(medium) {    width: percentage(6/6);      }
   @include respond-to(large)  {    width: percentage(4/6);      }
 }
 
-.col--5-6 {
+.l-col--5-6 {
+  @extend .l-col;
   @include respond-to(small)  {    width: 100%;                 }
   @include respond-to(medium) {    width: percentage(6/6);      }
   @include respond-to(large)  {    width: percentage(5/6);      }
 }
 
-.col--6-6 {
+.l-col--6-6 {
+  @extend .l-col;
   @include respond-to(small)  {    width: 100%;                 }
   @include respond-to(medium) {    width: percentage(6/6);      }
   @include respond-to(large)  {    width: percentage(6/6);      }

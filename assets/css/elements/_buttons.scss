@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+//
+// Buttons
+//
+// -----------------------------------------------------------------------------
+
+%btn {
+  position: relative;
+  -webkit-appearance: none;
+  outline: none;
+  text-decoration: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+  @include user-select(none);
+}
+
+.btn {
+  @extend %btn;
+  // content;
+}
+
+// -----------------------------------------------------------------------------
+// Buttons Variant or Style
+// -----------------------------------------------------------------------------
+
+.btn-default {
+  // content;
+  &:hover {
+    // content;
+  }
+}
+
+.btn-primary {
+  // content;
+  &:hover {
+    // content;
+  }
+}
+
+.btn-link {
+  // content;
+  &:hover {
+    // content;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Buttons size
+// -----------------------------------------------------------------------------
+
+.btn--small {
+  // content;
+}
+
+.btn--medium {
+  // content;
+}
+
+.btn--large {
+  // content;
+}
+
+
+// -----------------------------------------------------------------------------
+// Buttons behaviors
+// -----------------------------------------------------------------------------
+
+.is-active {
+  // content;
+}
+
+.is-disabled {
+  // content;
+}
+
+
+
+

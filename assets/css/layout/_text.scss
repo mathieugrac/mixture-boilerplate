@@ -1,28 +1,18 @@
 // -----------------------------------------------------------------------------
 //
-// Typography
+// Text
 //
 // -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
-// Base
+// Text rendering
 // -----------------------------------------------------------------------------
 
 %text-rendering {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  // @extend %text-rendering;
-  @extend %font-primary;
-  @include font-size(base);
 }
 
 
@@ -42,11 +32,27 @@ body {
 
 
 // -----------------------------------------------------------------------------
-// Typographic classes
+// Text positioning
 // -----------------------------------------------------------------------------
 
-.uppercase {
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.l-textCenter {
+  text-align: center;
 }
+
+.l-textRight {
+  text-align: right;
+}
+
+
+// -----------------------------------------------------------------------------
+// Text styling
+// -----------------------------------------------------------------------------
+
+.l-textUppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+
+
 

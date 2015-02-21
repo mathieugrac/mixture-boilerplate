@@ -9,7 +9,7 @@
         {{ "index.css" | asset_url | stylesheet_tag }}
         {% block styles %}{% endblock %}
     </head>
-    <body>
+    <body class="l-wrapper l-outterMargin">
         <!-- {% include "header" %} -->
         {% block content %}{% endblock %}
         <!-- {% include "footer" %} -->

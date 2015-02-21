@@ -1,40 +1,16 @@
 // -----------------------------------------------------------------------------
 //
-// Text
+// Images
 //
 // -----------------------------------------------------------------------------
 
 
-.text--small {
-  // content;
-}
-
-.text--base {
+%img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
-.text--medium {
-  // content;
+.img, img {
+  @extend %img;
 }
-
-
-p {
-  @extend .text--base;
-}
-
-
-b {
-  // content;
-}
-
-i {
-  // content;
-}
-
-small {
-  // content;
-}
-
-
-
-

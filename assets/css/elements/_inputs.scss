@@ -1,52 +1,53 @@
 // -----------------------------------------------------------------------------
 //
-// Sections
+// Inputs
 //
 // -----------------------------------------------------------------------------
 
 
-// -----------------------------------------------------------------------------
-// Containers
-// -----------------------------------------------------------------------------
-
-.wrapper {
-  max-width: $max-width;
-  margin: 0 auto;
-}
-
-section {
-  @extend .row;
-  padding: space(small) 0;
-}
-
-main {
-  @extend .outter-padding;
-  padding: space(medium) 0;
+%input {
+  @extend %text-rendering;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  @include border-radius(0);
 }
 
 
 // -----------------------------------------------------------------------------
-// Space
+// Inputs
 // -----------------------------------------------------------------------------
 
-.outter-padding {
- padding-left:  $gutter*2 !important;
- padding-right: $gutter*2 !important; 
+input,
+textarea,
+select {
+  @extend %input;
+}
+
+input[type='submit'] {
+  cursor: pointer;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  @include placeholder() {
+    // color: $grey--light;
+  }
 }
 
 
 // -----------------------------------------------------------------------------
-// Classes
+// Selectors
 // -----------------------------------------------------------------------------
 
-.align-center {
-  text-align: center;
-}
+// -----------------------------------------------------------------------------
+// Textareas
+// -----------------------------------------------------------------------------
 
-.align-right {
-  text-align: center;
-}
 
-.inline-block {
-  display: inline-block;
-}
+
